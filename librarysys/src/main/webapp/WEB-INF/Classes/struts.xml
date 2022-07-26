@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD  
+ Struts Configuration 2.1//EN"   
+"http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="abc" extends="struts-default">  
+  
+<action name="login">  
+<result >login.jsp</result>  
+</action>  
+
+<action name="adminhome">  
+<result >adminloginsuccess.jsp</result>  
+</action>  
+
+<action name="userhome">  
+<result >loginsuccess.jsp</result>  
+</action>  
+
+<action name="register">  
+<result >register.jsp</result>  
+</action> 
+
+<action name="adminlogin">  
+<result >adminlogin.jsp</result>  
+</action>
+
+<action name="addbooks">  
+<result >addbooks.jsp</result>  
+</action>  
+  
+<action name="loginprocess" class="test.LoginAction">  
+<result name="success"  >loginsuccess.jsp</result>  
+<result name="error" >loginerror.jsp</result>  
+</action>  
+ 
+<action name="registerAction" class="test.RegisterAction">
+<result >register.jsp</result>    
+<result name="success" >registersuccess.jsp</result>  
+
+<result name="error" >registererror.jsp</result> 
+</action> 
+
+
+<action name="adminloginprocess" class="test.AdminLogin">  
+<result name="success">adminloginsuccess.jsp</result> 
+<result name="error" >loginerror.jsp</result>  
+</action>
+
+<action name="viewbooks" class="test.ShowBooks">  
+<result name="success">viewbooks.jsp</result>  
+</action>  
+
+<action name="returnbook" class="test.ReturnBooks">  
+<result name="success">return.jsp</result>  
+</action> 
+
+<action name="dashboard" class="test.MostBorrowed">  
+<result name="success">dashboard.jsp</result>  
+</action> 
+
+<action name="addbooksaction" class="test.AddBooks">  
+<result name="success">actionsuccess.jsp</result> 
+<result name="error">actionfailure.jsp]</result> 
+</action> 
+
+<action name="borrow" class="test.Borrow">  
+<result name="success">loginsuccess.jsp</result>  
+</action>
+
+<action name="request" class="test.Borrow" method="makerequest">  
+<result name="success">requestsuccess.jsp</result>  
+</action>
+
+<action name="return" class="test.Borrow" method="returnbook">  
+<result name="success">returnsuccess.jsp</result>  
+</action>
+
+<action name="viewrequests" class="test.ViewRequests">  
+<result name="success">requestview.jsp</result>  
+</action>
+
+<action name="logout" class="test.LoginAction" method="logout">  
+<result name="success" >logoutsuccess.jsp</result>  
+</action>  
+  
+<action name="profile" class="test.Profile">  
+<result name="success" >profilesuccess.jsp</result>  
+<result name="error" >profileerror.jsp</result>  
+</action>  
+  
+</package>  
+</struts>      
